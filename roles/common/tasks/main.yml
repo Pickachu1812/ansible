@@ -1,0 +1,9 @@
+---
+# tasks file for common
+- name: Install vim RHEL # имя задачи может быть любым и поддерживает переменные
+  import_tasks: redhat.yml # в task можно подключить другой файл с тасками
+  when: ansible_facts['os_family']|lower == 'redhat' # проверка условия выполнения таска, в данном случае проверяем серверы к семейству операционных систем
+
+- name: Install vim for Debian 
+  import_tasks: debian.yml
+  when: ansible_facts['os_family']|lower == 'debian'

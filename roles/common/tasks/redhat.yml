@@ -1,0 +1,5 @@
+# roles/common/tasks/redhat.yml
+- name:
+  yum: # а для RHEL это yml 
+    name: "vim"
+    state: present

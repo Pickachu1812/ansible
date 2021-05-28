@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  become_method: sudo
+  become_user: root
+  remote_user: geek
+  pre_tasks:
+    - ping:
+  roles:
+    - common
+  post_tasks:
+    - debug:
