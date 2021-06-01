@@ -1,7 +1,4 @@
 server_name: "localhost" # тут ваш домен 
-mysql_db: "wordpress" 
-mysql_user: "wordpress"
-mysql_password: "WordpreSS0!"
 
 nginx_vhosts:
   - listen: "80"
